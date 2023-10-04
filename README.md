@@ -1,4 +1,11 @@
+Added an option `SSL_ENABLED=false `, so that it won't initialize SSL during startup. 
+
+This can be beneficial, if you already have your own SSL or a reverse proxy. 
+
+---
+
 # XSS Hunter Express
+
 ## *Sets up in 5 minutes and requires no maintenance*
 
 The fastest way to set up XSS Hunter to test and find blind cross-site scripting vulnerabilities.
@@ -17,6 +24,7 @@ To set up XSS Hunter Express, modify the [`docker-compose.yaml`](https://github.
 The following are some YAML fields (in [`docker-compose.yaml`](https://github.com/mandatoryprogrammer/xsshunter-express/blob/main/docker-compose.yml)) you'll need to modify before starting the service:
 
 * `HOSTNAME`: Set this field to your hostname you want to use for your payloads and to access the web admin panel. Often this is as short as possible (e.g. `xss.ht`) so the payload can be fit into various fields for testing. This hostname should be mapped to the IP address of your instance (via a DNS `A` record).
+* `SSL_ENABLED`: Set `true` or `false` depending on setup.
 * `SSL_CONTACT_EMAIL`: In order to automatically set up and renew TLS/SSL certificates via [Let's Encrypt](https://letsencrypt.org/) you'll need to provide an email address.
 
 The following are needed if you want email notifications:
