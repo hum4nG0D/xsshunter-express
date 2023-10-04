@@ -1,4 +1,4 @@
-Added an option `SSL_ENABLED=false `, so that it won't initialize SSL during startup. 
+Added an option `SSL_ENABLED=false`, so that it won't initialize SSL during startup. 
 
 This can be beneficial, if you already have your own SSL or a reverse proxy. 
 
